@@ -1,0 +1,81 @@
+# SITE SETTINGS
+# global meta settings
+title:
+  en: This is an en website
+  nl: Dit is een nl website
+description:
+  en: This is a great website
+  nl: Dit is een prima website
+keywords:
+  en: shoes
+  nl: schoenen
+index:
+  en: /en/catalog
+  nl: /nl/cataloog
+baseurl: /brandsfit
+exclude: ['README.md']
+
+# COLLECTIONS
+collections:
+  jobs:
+    title: Jobs
+    output: true
+    url: jobs
+
+# LANGUAGES
+l:
+  nl: Nederlands
+  fr: Français
+
+# TRANSLATIONS
+t:
+  nl:
+    helpdesk: Bel onze helpdesk
+    netherlands: Nederland
+    belgium: België
+    club_webshop: Club Webshop
+    register_club: Registreer je club
+    call: <u>Bel ons</u> voor een afspraak of meer informatie
+    appointment: <u><strong>Maak een afspraak</strong></u> met mij en scoor je gratis tenues
+    karel_brandsfit: Karel van Brandsfit
+  fr:
+    helpdesk: FR Bel onze helpdesk
+    netherlands: Les Pays-Bas
+    belgium: Belgique
+    club_webshop: FR Club Webshop
+    register_club: Registrez votre club
+    call: <u>Appelez-nous</u> pour un rendez-vous ou plus d'informations
+    appointment: <u><strong>Prenez un rendez-vous</strong></u> avec moi et marquez vos kits gratuits
+    karel_brandsfit: Karel de Brandsfit
+
+# NAVIGATION
+# main top navigation
+# be sure to add both languages
+navi:
+  nl:
+    clubs:
+      name: Kiezen voor Brandsfit
+      url: /
+    about:
+      name: Over Brandsfit
+      url: /over-brandsfit
+    jobs:
+      name: Jobs
+      url: /jobs
+  fr:
+    clubs:
+      name: Choissir pour Brandsfit
+      url: /
+    about:
+      name: Au sujet de brandsfit
+      url: /au-sujet-de-brandsfit
+    jobs:
+      name: Emplois
+      url: /emplois
+
+      
+# BLOCKS
+# render the header and footer block with right language
+blocks:
+  nl:
+  fr:

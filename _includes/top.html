@@ -1,0 +1,56 @@
+<section class="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-7">
+        <ul class="nav">
+          <span class="navbar-text d-none d-lg-inline">
+            <span class="fa fa-mobile-phone green mr-1"></span> <span class="text-uppercase">{{site.t[page.lang].helpdesk}}</span>  
+          </span>
+          <span class="navbar-text ml-lg-2">
+            <span class="flag flag-netherlands"></span> <span class="d-none d-sm-inline">{{site.t[page.lang].netherlands}}</span> +31 53-2032027
+          </span>
+          <span class="navbar-text ml-2">
+            <span class="flag flag-belgium"></span> <span class="d-none d-sm-inline">{{site.t[page.lang].belgium}}</span> +32 55 335680
+          </span>
+          <li class="nav-item dropdown ml-auto d-md-none">
+            <a class="nav-link dropdown-toggle px-0 mx-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ page.lang }}
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+            {% for post in posts %}
+            <a href="{{site.baseurl}}{{ post.url }}" class="dropdown-item {{ post.lang }}">{{site.l[page.lang]}}</a>
+            {% endfor %}
+            {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+            {% for page in pages %}
+            <a href="{{site.baseurl}}{{ page.url }}" class="dropdown-item {{ page.lang }}">{{site.l[page.lang]}}</a>
+            {% endfor %}
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-md-inline col-md-5">
+        <ul class="nav">
+          <li class="nav-item dropdown ml-auto">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{site.l[page.lang]}}
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+            {% for post in posts %}
+            <a href="{{site.baseurl}}{{ post.url }}" class="dropdown-item {{ post.lang }}">{{site.l[page.lang]}}</a>
+            {% endfor %}
+            {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+            {% for page in pages %}
+            <a href="{{site.baseurl}}{{ page.url }}" class="dropdown-item {{ page.lang }}">{{site.l[page.lang]}}</a>
+            {% endfor %}
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link clubshop"><span class="d-none d-sm-inline">{{site.t[page.lang].club_webshop}}</span></a>  
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

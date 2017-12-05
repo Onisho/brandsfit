@@ -1,0 +1,21 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title[page.lang] | escape }}{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description[page.lang] }}{% endif %}">
+  <meta name="keywords" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.keywords[page.lang] | escape }}{% endif %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/styles.css">
+  
+  {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+  {% for post in posts %}
+  <link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url }}" />
+  {% endfor %}
+  {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+  {% for page in pages %}
+  <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url }}" />
+  {% endfor %}
+    
+</head>

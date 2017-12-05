@@ -1,0 +1,19 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row py-4">
+      <div class="col-sm-12 col-lg-3 order-2 order-lg-1">
+        <div class="logo d-none d-lg-block">Brandsfit</div>
+        <ul class="nav flex-column text-uppercase">
+          {% for menu in site.navi[page.lang] %}
+          <li class="nav-item"><a href="{{site.baseurl}}/{{page.lang}}{{ menu[1].url }}">{{ menu[1].name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-sm-12 col-lg-7 order-1 order-lg-2">
+        <h2>{{site.t[page.lang].call}}</h2>
+        <p><span class="flag flag-netherlands"></span> {{site.t[page.lang].netherlands}} +31 53-2032027</p>
+        <p class="mb-3"><span class="flag flag-belgium"></span> {{site.t[page.lang].belgium}} +32 55 335680</p>
+      </div>
+    </div>
+  </div>
+</footer>

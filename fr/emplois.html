@@ -1,0 +1,39 @@
+---
+layout: master
+title: Emplois
+lang: fr
+ref: jobs
+---
+
+<section class="jumbo jobs">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <h1 class="white text-center">Brandsfit est en croissance et nous recrutons</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-3">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <h2 class="text-uppercase">Wij zoeken jou</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="job">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        {% for job in site.jobs %}
+          {{job.title}}
+          {{job.content}}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

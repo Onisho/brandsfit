@@ -1,0 +1,62 @@
+---
+layout: master
+title: jobs
+lang: nl
+ref: jobs
+---
+
+<section class="jumbo jobs">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <h1 class="white text-center">Brandsfit groeit dus wij werven</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-3">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <h2 class="text-uppercase">Wij zoeken jou</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="card-deck">
+          {% for job in site.jobs %}
+          <div class="card card-job">
+            <div class="card-body">
+              <p class="card-text lead"><a href="">{{job.title}}</a></p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="job">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2"> 
+        {% for job in site.jobs %} 
+        <h3 class="text-center mb-4">{{job.title}}</h3>
+        {{job.content}} 
+        {% endfor %} 
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-8 offset-md-2">
+        <div class="card card-well">
+          <div class="card-body text-center">
+            <h2 class="card-title text-uppercase mb-2 pb-2">Ben jij een match voor ons</h2>
+            <h3>Mail dan met Melissa</h3>
+            <p class="card-text"><a href="mailto:melissa@brandsfit.com">melissa@brandsfit.com</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

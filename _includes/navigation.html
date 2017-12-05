@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-md navbar-brandsfit" data-toggle="sticky-onscroll">
+  <div class="container">
+    <a class="navbar-brand" href="#">Brandsfit</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        
+        {% for menu in site.navi[page.lang] %}
+        {% assign active = nil %}
+        {% assign active = '/' | append: page.lang | append: menu[1].url | append: '.html' %}
+        {% if page.url == active %}
+        {% assign active = 'active' %}
+        {% endif %}
+        
+        <li class="{{menu[1].name}} {% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %} nav-item">
+          <a href="{{site.baseurl}}/{{page.lang}}{{ menu[1].url }}" class="nav-link">{{ menu[1].name }}</a>
+        </li>
+        {% endfor %}
+
+        <li class="nav-item d-md-none">
+          <a class="nav-link" href="#">{{site.t[page.lang].club_webshop}}</a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item registreer">
+          <a class="nav-link" href="#">{{site.t[page.lang].register_club}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
