@@ -24,28 +24,34 @@ ref: jobs
     </div>
     <div class="row">
       <div class="col">
-        <div class="card-deck">
+        <ul class="nav nav-pills nav-pills-jobs nav-justified" role="tablist">
           {% for job in site.jobs %}
-          <div class="card card-job">
-            <div class="card-body">
-              <p class="card-text lead"><a href="">{{job.title}}</a></p>
-            </div>
-          </div>
+          <li class="nav-item">
+            <a class="nav-link mx-5 {% if forloop.first %}active{% endif %}" href="#{{job.title | replace: ' ', '-' | downcase}}" role="tab" data-toggle="tab">{{job.title}}</a>
+          </li>
           {% endfor %}
-        </div>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
+
 <section class="job">
+  <div class="divider divider-middle">
+    <img src="/brandsfit/img/divider-horn.png" class="img-fluid mx-auto d-block">
+  </div>
   <div class="container">
     <div class="row">
-      <div class="col-md-8 offset-md-2"> 
+      <div class="col-md-8 offset-md-2">
+        <div class="tab-content">
         {% for job in site.jobs %} 
-        <h3 class="text-center mb-4">{{job.title}}</h3>
-        {{job.content}} 
+        <div role="tabpanel" class="tab-pane {% if forloop.first %}active{% endif %}" id="{{job.title | replace: ' ', '-' | downcase}}">
+          <h3 class="text-center mb-4">{{job.title}}</h3>
+          {{job.content}} 
+        </div>
         {% endfor %} 
+          </div>
       </div>
     </div>
     <div class="row mt-5">

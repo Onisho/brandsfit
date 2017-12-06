@@ -60,6 +60,11 @@ h6, .h6 {}
 .postscript small {font-style:italic;font-weight:100;color:#95989A;font-size:.9rem;}
 .postscript .karel {position:absolute;width:150px;height:170px;background:url('../img/karel.png') no-repeat;bottom:-16px;right:0;display:block;background-size:contain;}
 
+/* NAVPILLS */
+.nav-pills-jobs .nav-link {padding:2rem;background-color:#FFFFFF;border:1px solid #FFFFFF;font-style:italic;font-family: Aleo,Georgia,Serif;font-size:1.2rem;}
+.nav-pills-jobs .nav-link.active {background-color:#FFFFFF;border-color:#0fb89a;color:#0fb89a;}
+
+
 
 /* FOOTER */
 .footer {background-color:#0fb89a;color:#FFF;}
