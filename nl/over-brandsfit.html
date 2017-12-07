@@ -10,7 +10,7 @@ ref: about
     <div class="row text-center">
       <div class="col-md-10 offset-md-1">
         <h1 class="white">Brandsfit is het beste platform om clubs en sponsoren samen te brengen</h1>
-        <h3 class="mb-5">We gaan voor de beste deal!</h3>
+        <h3 class="mb-5 white">We gaan voor de beste deal!</h3>
       </div>
     </div>
   </div>
@@ -28,16 +28,82 @@ ref: about
 </section>
 
 <section>
-  <div class="divider divider-middle">
-    <img src="/brandsfit/img/divider-horn.png" class="img-fluid mx-auto d-block">
+  <div class="divider divider-middle-text align-middle">
+    <p class="text-center align-middle">Wie zijn wij</p>
   </div>
   <div class="container">
     <div class="row">
-    <div class="col">
-      <h4>Jip Maathuis <small class="text-muted">MANAGING PARTNER - brand relations</small></h4>
-      <p>Brandsfit is opgericht door Jip Maathuis (1997), student commerciële economie aan de Hogeschool van Amsterdam, met support van een Belgische multinational. Op negenjarige leeftijd richtte hij stichting JipsGoedeDoelen op, die zich middels de verkoop van chocoladeletters inzet voor War Child en heeft de afgelopen acht jaar meer dan 24.000 oorlogskinderen kunnen helpen. </p>
-        
-      <p>Brandsfit wil zich inzetten om een verantwoord sportklimaat te creëren waarin individuele sporters, de sportvereniging en het bedrijfsleven maximale rendement behalen op alle gebied.</p>
+      <div class="col">
+        <div class="media">
+          <img class="rounded-circle mr-5 d-none d-md-block" src="{{site.baseurl}}/img/team-jip-maathuis.jpg">
+          <div class="media-body">
+            <img class="rounded-circle d-block d-md-none mb-3 text-center" src="{{site.baseurl}}/img/team-jip-maathuis.jpg" style="margin:0 auto;">
+            <h4>Jip Maathuis <small class="text-muted">MANAGING PARTNER - brand relations</small></h4>
+            <p>Brandsfit is opgericht door Jip Maathuis (1997), student commerciële economie aan de Hogeschool van Amsterdam, met support van een Belgische multinational. Op negenjarige leeftijd richtte hij stichting JipsGoedeDoelen op, die zich middels de verkoop van chocoladeletters inzet voor War Child en heeft de afgelopen acht jaar meer dan 24.000 oorlogskinderen kunnen helpen. </p>
+            <p>Brandsfit wil zich inzetten om een verantwoord sportklimaat te creëren waarin individuele sporters, de sportvereniging en het bedrijfsleven maximale rendement behalen op alle gebied.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row text-center">
+      <div class="col">
+          {% for member in site.data.team %}
+          <div class="card card-team mb-3">
+            <img class="card-img-top" src="{{site.baseurl}}/img/team-{{ member.name | replace: ' ', '-' | downcase}}.jpg">
+            <div class="card-body">
+              <p class="card-text">{{member.name}}</p>
+              <p class="card-text small text-muted">{{member.function}}</p>
+            </div>
+          </div>
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-4">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col">
+        <h2 class="h1 white">Sportsponsoring op z’n eenvoudigst</h2>
+        <h3 class="white">Brandsfit is snel, gemakkelijk, en inzichtelijk voor zowel sponsors als sportclubs.</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="">
+  <div class="container-fluid">
+    <div class="row text-center">
+      <div class="col">
+      <h2 class="text-uppercase">Onze Historiek</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="carousel-wrapper">
+          <div class="carousel" data-flickity>
+            {% for item in site.data.history %}
+            <div class="card card-history carousel-cell text-center">
+              <img class="card-img-top rounded-circle" src="{{site.baseurl}}/img/history-{{item.img}}.jpg">
+              <div class="date">
+                <span class="day">{{item.date | date: "%d"}}</span>
+                <span class="month">{{item.date | date: "%b"}}</span>
+                <span class="year">{{item.date | date: "%Y"}}</span>
+              </div>
+              <div class="card-body">
+                <p class="card-title h3">{{item.title}}</p>
+                <p class="card-text text small">{{item.text}}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
       </div>
     </div>
   </div>
