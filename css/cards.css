@@ -33,22 +33,41 @@
 .card-history .card-title {font-size:1.2rem;color:#0fb89a;font-family:georgia;font-style:italic;}
 .flickity-prev-next-button {top:35%;}
 
+.card-webshop {background-color:#ffffff;border:none;position:relative;min-height:100px;}
+.card-webshop .card-image {position:absolute;top:-35px;width:100%;}
+.card-webshop p {font-size:1.1rem;font-weight:400;}
+
+.card-visibility {background-color:#F5FCFB;border:none;position:relative;}
+.card-visibility .card-image {position:absolute;top:-80px;width:100%;}
+.card-visibility .card-body {padding-top:50px;padding-bottom:50px;}
+.card-visibility .step {position:absolute;bottom:-10px;margin-left:calc(50% - 16px);}
+
+.card-benefits {background-color:#F5FCFB;border:none;position:relative;}
+
+
+.card-deck {display:flex;justify-content:flex-start;flex-flow:row wrap;align-items:stretch;}
+.card-deck .card {margin-bottom:15px;width:100%;}
+
 
 @media (min-width: 34em) {
   .card-columns.reviews {-webkit-column-count:1;-moz-column-count:1;column-count:1;}
+  .card-deck .card {display:block;flex-basis: 100%;}
   .card-team {width:50%;}
 }
 @media (min-width: 48em) {
   .card-columns.reviews {-webkit-column-count:2;-moz-column-count:2;column-count:1;}
+  .card-deck .card {display:block;flex-basis: 100%;}
   .card-steps {float:left;margin-left:25px;}
   .card-team {width:25%;}
 }
 @media (min-width: 62em) {
   .card-columns.reviews {-webkit-column-count:2;-moz-column-count:2;column-count:2;}
+  .card-deck .card {display:block;flex-basis: 13.5%;}
   .card-team {width:20%;}
 }
 @media (min-width: 75em) {
   .card-columns.reviews {-webkit-column-count:2;-moz-column-count:2;column-count:2;}
   .card-columns.team {-webkit-column-count:6;-moz-column-count:6;column-count:6;}
+  .card-deck .card {display:block;flex-basis:13.5%;}
   .card-team {width:16.666%;}
 }

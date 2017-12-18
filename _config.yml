@@ -62,6 +62,9 @@ navi:
     jobs:
       name: Jobs
       url: /jobs
+    visibility:
+      name: Visibiliteit
+      url: /visibiliteit
   fr:
     clubs:
       name: Choissir pour Brandsfit
@@ -72,6 +75,9 @@ navi:
     jobs:
       name: Emplois
       url: /emplois
+    visibility:
+      name: Visibilité
+      url: /visibilite
 
       
 # BLOCKS

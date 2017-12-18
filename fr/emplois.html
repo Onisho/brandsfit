@@ -15,24 +15,52 @@ ref: jobs
   </div>
 </section>
 
-<section class="bg-3">
+<section class="bg-3 padding-5">
   <div class="container">
     <div class="row">
       <div class="col text-center">
-        <h2 class="text-uppercase">Wij zoeken jou</h2>
+        <h2 class="text-uppercase">Nous vous cherchons</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <ul class="nav nav-pills nav-pills-jobs nav-justified" role="tablist">
+          {% for job in site.jobs %}
+          <li class="nav-item">
+            <a class="nav-link mx-5 mb-1 {% if forloop.first %}active{% endif %}" href="#{{job.title | replace: ' ', '-' | downcase}}" role="tab" data-toggle="tab">{{job.title}}</a>
+          </li>
+          {% endfor %}
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="job">
+<section class="job padding-7">
+  <div class="divider divider-horn d-none d-md-block">
+    <img src="/brandsfit/img/divider-horn.png" class="img-fluid mx-auto d-block">
+  </div>
   <div class="container">
     <div class="row">
-      <div class="col">
-        {% for job in site.jobs %}
-          {{job.title}}
-          {{job.content}}
-        {% endfor %}
+      <div class="col-md-8 offset-md-2">
+        <div class="tab-content">
+        {% for job in site.jobs %} 
+        <div role="tabpanel" class="tab-pane {% if forloop.first %}active{% endif %}" id="{{job.title | replace: ' ', '-' | downcase}}">
+          <h3 class="text-center mb-4">{{job.title}}</h3>
+          {{job.content}} 
+        </div>
+        {% endfor %} 
+          </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-8 offset-md-2">
+        <div class="card card-well">
+          <div class="card-body text-center">
+            <h2 class="card-title text-uppercase mb-2 pb-2">Êtes-vous un match pour nous?</h2>
+            <h3>Mail avec Melissa</h3>
+            <p class="card-text"><a href="mailto:melissa@brandsfit.com">melissa@brandsfit.com</a> </div>
+        </div>
       </div>
     </div>
   </div>

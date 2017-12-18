@@ -5,4 +5,106 @@ lang: fr
 ref: about
 ---
 
-<h1>Over Brandsfit FR</h1>
+<section class="jumbo about">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-10 offset-md-1">
+        <h1 class="white">Brandsfit est la meilleure plate-forme en ligne réunissant les clubs et les sponsors</h1>
+        <h3 class="mb-3 mt-4 white">Nous allons pour la meilleure affaire !</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-3 padding-7">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <h2 class="text-uppercase">notre objectif</h2>
+        <h3>Brandsfit maakt sport voor alle jongeren toegankelijk. We realiseren dit door je clubbudget te verruimen dankzij het leveren van gratis tenues.</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="padding-10">
+  <div class="divider divider-middle-text align-middle d-none d-md-block">
+    <p class="text-center align-middle">Qui sommes nous ?</p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="media">
+          <img class="rounded-circle mr-5 d-none d-md-block" src="{{site.baseurl}}/img/team-jip-maathuis.jpg">
+          <div class="media-body">
+            <img class="rounded-circle d-block d-md-none mb-3 text-center" src="{{site.baseurl}}/img/team-jip-maathuis.jpg" style="margin:0 auto;">
+            <h4>Jip Maathuis <small class="text-muted">MANAGING PARTNER - brand relations</small></h4>
+            <p>Brandsfit a été fondée par Jip Maathuis (1997), étudiant en économie commerciale à l'Université d'Amsterdam, avec le soutien d'une multinationale belge. À l'âge de neuf ans, il a créé la fondation JipsGoedeDoelen, engagée par le biais de la vente de lettres de chocolat pour les enfants de Pays en Guerre et a contribué au cours des huit dernières années, à aider plus 24.000 enfants. Brandsfit veut s’impliquer à créer un zone de confort responsable dans lequel les sportifs indivudels, clubs, sports collectifs pourront atteindre et auront une efficacité maximale dans tous les domaines.</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <hr class="my-5">      
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col">
+          {% for member in site.data.team %}
+          <div class="card card-team mb-3">
+            <img class="card-img-top" src="{{site.baseurl}}/img/team-{{ member.name | replace: ' ', '-' | downcase}}.jpg">
+            <div class="card-body">
+              <p class="card-text">{{member.name}}</p>
+              <p class="card-text small text-muted">{{member.function}}</p>
+            </div>
+          </div>
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-4 padding-10">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col">
+        <h2 class="h1 white">Sponsoring sportif au plus simple</h2>
+        <h3 class="white">Brandsfit est rapide, facile et transparent pour les sponsors et clubs sportifs.</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="padding-7">
+  <div class="container-fluid">
+    <div class="row text-center">
+      <div class="col">
+      <h2 class="text-uppercase">Notre histoire</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="carousel-wrapper">
+          <div class="carousel" data-flickity>
+            {% for item in site.data.history %}
+            <div class="card card-history carousel-cell text-center">
+              <img class="card-img-top rounded-circle" src="{{site.baseurl}}/img/history-{{item.img}}.jpg">
+              <div class="date">
+                <span class="day">{{item.date | date: "%d"}}</span>
+                <span class="month">{{item.date | date: "%b"}}</span>
+                <span class="year">{{item.date | date: "%Y"}}</span>
+              </div>
+              <div class="card-body">
+                <p class="card-title h3">{{item.title}}</p>
+                <p class="card-text text small">{{item.text}}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

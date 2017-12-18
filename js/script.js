@@ -62,7 +62,9 @@ jQuery(document).ready(function($){
     stickyToggle(sticky, stickyWrapper, $(window));
   });
   
-  
+  // MATCH HEIGHT OF ELEMENTS
+  $('.card-visibility').matchHeight();  
+  $('.card-concept').matchHeight();
   
   
   
