@@ -1,17 +1,14 @@
 # SITE SETTINGS
 # global meta settings
 title:
-  en: This is an en website
-  nl: Dit is een nl website
+  nl: Brandsfit
+  fr: Brandsfit
 description:
-  en: This is a great website
-  nl: Dit is een prima website
+  nl: Verruim je clubbudget
+  fr: Augmentez le budget de votre club
 keywords:
-  en: shoes
-  nl: schoenen
-index:
-  en: /en/catalog
-  nl: /nl/cataloog
+  nl: clubbudget
+  fr: budget de club
 baseurl: /brandsfit
 exclude: ['README.md']
 
@@ -35,6 +32,7 @@ t:
     belgium: België
     club_webshop: Club Webshop
     register_club: Registreer je club
+    register_club_url: registreer-club
     call: <u>Bel ons</u> voor een afspraak of meer informatie
     appointment: <u><strong>Maak een afspraak</strong></u> met mij en scoor je gratis tenues
     karel_brandsfit: Karel van Brandsfit
@@ -44,6 +42,7 @@ t:
     belgium: Belgique
     club_webshop: FR Club Webshop
     register_club: Registrez votre club
+    register_club_url: registrez-club
     call: <u>Appelez-nous</u> pour un rendez-vous ou plus d'informations
     appointment: <u><strong>Prenez un rendez-vous</strong></u> avec moi et marquez vos kits gratuits
     karel_brandsfit: Karel de Brandsfit

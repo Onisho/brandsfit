@@ -67,5 +67,62 @@ jQuery(document).ready(function($){
   $('.card-concept').matchHeight();
   
   
+  // WIZARD
+  $('#rootwizard').bootstrapWizard({onTabShow: function(tab, navigation, index) {
+    var $total = navigation.find('li').length;
+    var $current = index+1;
+    var $percent = ($current/$total) * 100;
+    $('#rootwizard').find('.progress-bar').css({width:$percent+'%'});
+		
+    // If it's the last tab then hide the last button and show the finish instead
+    if($current >= $total) {
+      $('#rootwizard').find('.pager .next').hide();
+      $('#rootwizard').find('.pager .finish').show();
+      $('#rootwizard').find('.pager .finish').removeClass('disabled');
+    } else {
+      $('#rootwizard').find('.pager .next').show();
+      $('#rootwizard').find('.pager .finish').hide();
+    }
+		
+  }});
+  
+  $("input[type=radio]").change(function () {
+      $("input[type=radio]").parent().css( "border-color", "#F5FCFB" );
+      if($(this).prop("checked")) {
+        $(this).parent().css( "border-color", "#0fb89a" );
+      } 
+    }).change();
+  
+    $("input[type=checkbox]").change(function () {
+      if($(this).prop("checked")) {
+        $(this).parent().css( "border-color", "#0fb89a" );
+      } else {
+        $(this).parent().css( "border-color", "#F5FCFB" );
+      }
+    }).change();
+  
+    $("#region-select").hide();
+    $("#region .regionaal").click(function () {
+      $("#region").hide();
+      $("#region-select").show();        
+    });
+  
+    $("#country-select").hide();
+    $("#region .landelijk").click(function() {
+      $("#region").hide();
+      $("#country-select").show();   
+    });
+
+
+	$('input').on('keydown', function(event) {
+   		var x = event.which;
+   		if (x === 13) {
+       		event.preventDefault();
+   		}
+	});
+  
+  
+  
+  
   
 });

@@ -1,0 +1,251 @@
+---
+layout: master
+title: Registreer Club
+description: Registreer je club vrijblijvend om je gratis teneus in de wacht te slepen
+lang: nl
+ref: register
+---
+
+<section class="my-5">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <h2 class="text-uppercase">Registreer je club</h2>
+        <h3>Meld je vandaag vrijblijvend aan als club om je GRATIS tenues in de wacht te slepen</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WIZZARD -->
+<form name="clubs" id="clubs" action="post-club.php" method="post">
+<section class="wizzard first">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="rootwizard">
+          <div class="navbar">
+	       <div class="navbar-inner">
+             <div class="container">
+               <ul class="nav nav-pills">
+                 <li class="nav-item"><a href="#tab1" data-toggle="tab" class="nav-link">1</a></li>
+                 <li class="nav-item"><a href="#tab2" data-toggle="tab" class="nav-link">2</a></li>
+                 <li class="nav-item"><a href="#tab3" data-toggle="tab" class="nav-link">3</a></li>
+                 <li class="nav-item"><a href="#tab4" data-toggle="tab" class="nav-link">4</a></li>
+                 <li class="nav-item"><a href="#tab5" data-toggle="tab" class="nav-link">5</a></li>
+               </ul>
+             </div>
+            </div>
+          </div>
+          <div id="bar" class="progress progress-striped active">
+            <div class="progress-bar"></div>
+          </div>
+          <div class="tab-content">
+            
+            <!-- TAB 1 -->
+            <div class="tab-pane" id="tab1">
+              <h4>In welke onderdelen van het concept van Brandsfit ben je geïnteresseerd?</h4>
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="thumbnail">
+                    <input type="radio" class="radio" name="interesse" id="tenues" value="tenues"/>
+                    <img src="{{site.baseurl}}/img/aanmelden-shirts.png" alt="gratis tenues" class="img-fluid">
+                    <div class="caption">
+                      <h3 class="text-center">De gratis tenues</h3>
+                    </div>  
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="thumbnail">
+                    <input type="radio" class="radio" name="interesse" id="webhop" value="webshop"/>
+                    <img src="{{site.baseurl}}/img/aanmelden-webshop.png" alt="webshop" class="img-fluid">
+                    <div class="caption">
+                      <h3 class="text-center">De webshop van Brandsfit</h3>
+                    </div>  
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="thumbnail">
+                    <input type="radio" class="radio" name="interesse" id="beide" value="beide"/>
+                    <img src="{{site.baseurl}}/img/aanmelden-shirts-webshop.png" alt="beide" class="img-fluid">
+                    <div class="caption">
+                      <h3 class="text-center">Beide</h3>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- TAB 2 -->
+            <div class="tab-pane" id="tab2">
+              <h4>Wat is de naam van jouw club?</h4>
+              <div class="row">
+                <div class="col-sm-12">
+                  <input class="form-control input-xl" name="club" id="Club" />
+                </div>
+              </div>
+            </div>
+            
+            <!-- TAB 3 -->
+            <div class="tab-pane" id="tab3">
+              <h4>In welke regio is jouw club actief?</h4>
+              <div class="row">
+                <div class="col-sm-6 text-center">
+                  <img src="{{site.baseurl}}/img/map-nl.png" alt="map" />
+                  <div class="regio">
+                    <div class="radio">
+                      <label class="regio">
+                        <input type="radio" name="regio" value="noord"> Noord
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label class="regio">
+                        <input type="radio" name="regio" value="oost"> Oost
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label class="regio">
+                        <input type="radio" name="regio" value="zuid I"> Zuid I
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label class="regio">
+                        <input type="radio" name="regio" value="zuid II"> Zuid II
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label class="regio">
+                        <input type="radio" name="regio" value="west I"> West I
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label class="regio">
+                        <input type="radio" name="regio" value="west II"> West II
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 text-center">
+                  <img src="{{site.baseurl}}/img/map-be.png" alt="map" />
+                  <div class="regio">
+                    <div class="radio">
+                      <label class="regio">
+                        <input type="radio" name="regio" value="oost-vlaanderen"> Oost-Vlaanderen
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label class="regio">
+                        <input type="radio" name="regio" value="west-vlaanderen"> West-Vlaanderen
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label class="regio">
+                        <input type="radio" name="regio" value="antwerpen"> Antwerpen
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label class="regio">
+                        <input type="radio" name="regio" value="limburg"> Limburg
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label class="regio">
+                        <input type="radio" name="regio" value="brussel"> Brussel
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label class="regio">
+                        <input type="radio" name="regio" value="vlaams-brabant"> Vlaams-Brabant
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label class="regio">
+                        <input type="radio" name="regio" value="waals-brabant"> Waals-Brabant
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label class="regio">
+                        <input type="radio" name="regio" value="henegouwen"> Henegouwen
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label class="regio">
+                        <input type="radio" name="regio" value="luik"> Luik
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label class="regio">
+                        <input type="radio" name="regio" value="namen"> Namen
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label class="regio">
+                        <input type="radio" name="regio" value="luxemburg"> Luxemburg
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- TAB 4 -->
+            <div class="tab-pane" id="tab4">
+              <h4>Hoeveel jeugdleden heeft jouw club?</h4>
+              <div class="row">
+                <div class="col-sm-12">
+                  <input class="form-control input-xl" name="jeugdleden" />
+                </div>
+              </div>
+            </div>
+
+            
+            <!-- TAB 5 -->
+            <div class="tab-pane" id="tab5">
+              <h4>Om jouw club - gratis en geheel vrijblijvend - het beste sponsorvoorstel te sturen, hebben we de laatste gegevens van je nodig:</h4>
+              <div class="row">
+                <div class="col-sm-12 form-horizontal">
+                  <div class="form-group row">
+                    <label class="col-md-2 control-label input-lg">Naam</label>
+                    <div class="col-md-10">
+                      <input id="Naam" name="naam" type="text" class="form-control input-xl">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-2 control-label input-lg">Email</label>
+                    <div class="col-md-10">
+                      <input id="Email" name="email" type="email" class="form-control input-xl">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-2 control-label input-lg">Telefoon</label>
+                    <div class="col-md-10">
+                      <input id="Telefoon" name="telefoon" type="text" class="form-control input-xl">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-2 control-label input-lg">Functie in de club</label>
+                    <div class="col-md-10">
+                      <input id="Functie" name="functie" type="text" class="form-control input-xl">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="my-5">
+              <ul class="pager wizard list-unstyled">
+                <!--<li class="previous"><a href="#">Vorige</a></li>-->
+                <li class="next"><a href="#" class="btn btn-primary">Volgende</a></li>
+                <li class="next finish" style="display:none;"><input type="submit" value="Submit" class="btn btn-primary"></li>
+              </ul>
+            </div>
+            
+            
+          </div>	
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</form>
+<!-- // WIZZARD -->
