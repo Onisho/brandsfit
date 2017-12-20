@@ -48,12 +48,7 @@ $result = mysql_query($sql) or die('Could not execute query.');
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Brandsfit - Brands.Set.Match.</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="[ENTER SITE DESCRIPTION HERE]">
-    <meta name="author" content="[ENTER AUTHOR INFO HERE]">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <meta http-equiv="refresh" content="0;url=nl" />
 
     <! -- WE ASSUME YOU ARE USING A main.css FOR CSS CUSTOMIZATION -->
     <!-- link rel="stylesheet" href="./css/main.css"> -->
