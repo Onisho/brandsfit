@@ -18,11 +18,11 @@ ref: homepage
         <h1 class="white">Verruim je clubbudget</h1>
         <h4 class="white mb-5">Brandsfit helpt jouw club vooruit met gratis tenues en sponsors</h4>
         <p>We leggen je graag uit hoe we dat doen</p>
-        <p><a href="#steps" class="btn btn-primary my-3 btn-lg zoom">Verruim mijn clubbudget</a></p>
+        <p><a href="#steps" class="btn btn-primary my-3 btn-md zoom">Verruim mijn clubbudget</a></p>
       </div>
     </div>
   </div>
-  <div class="scrolldown"></div>
+  <div class="scrolldown d-none d-md-block"></div>
 </section>
 
 
@@ -74,7 +74,7 @@ ref: homepage
     <div class="row">
       <div class="col-12 col-sm-6 col-md-3 mb-4">
         <div class="card card-webshop text-center">
-          <div class="card-image"> <img src="{{site.baseurl}}/img/webshop-money.png" alt=""> </div>
+          <div class="card-image"> <img src="{{site.baseurl}}/img/webshop-money.png" alt="" class="img-fluid"> </div>
           <div class="card-body">
             <p class="card-text">Extra<br />clubbudget</p>
           </div>
@@ -82,7 +82,7 @@ ref: homepage
       </div>
       <div class="col-12 col-sm-6 col-md-3 mb-4">
         <div class="card card-webshop text-center">
-          <div class="card-image"> <img src="{{site.baseurl}}/img/webshop-sale.png" alt=""> </div>
+          <div class="card-image"> <img src="{{site.baseurl}}/img/webshop-sale.png" alt="" class="img-fluid"> </div>
           <div class="card-body">
             <p class="card-text">Korting<br />voor alle clubleden</p>
           </div>
@@ -90,7 +90,7 @@ ref: homepage
       </div>
       <div class="col-12 col-sm-6 col-md-3 mb-4">
         <div class="card card-webshop text-center">
-          <div class="card-image"> <img src="{{site.baseurl}}/img/webshop-promo.png" alt=""> </div>
+          <div class="card-image"> <img src="{{site.baseurl}}/img/webshop-promo.png" alt="" class="img-fluid"> </div>
           <div class="card-body">
             <p class="card-text">Brand promoties<br />en aanbiedingen</p>
           </div>
@@ -98,7 +98,7 @@ ref: homepage
       </div>
       <div class="col-12 col-sm-6 col-md-3 mb-4">
         <div class="card card-webshop text-center">
-          <div class="card-image"><img src="{{site.baseurl}}/img/webshop-conditions.png" alt=""> </div>
+          <div class="card-image"><img src="{{site.baseurl}}/img/webshop-conditions.png" alt="" class="img-fluid"> </div>
           <div class="card-body">
             <p class="card-text">Competitieve<br />voorwaarden</p>
           </div>
@@ -125,7 +125,7 @@ ref: homepage
     <div class="row">
       <div class="col-12 col-sm-6 col-md-3 mb-4">
         <div class="card card-concept text-center">
-          <div class="card-image"> <img class="card-img-top" src="{{site.baseurl}}/img/concept1.png" alt="Card image cap"> </div>
+          <div class="card-image"> <img class="card-img-top img-fluid" src="{{site.baseurl}}/img/concept1.png" alt="Card image cap"> </div>
           <div class="card-body">
             <h4 class="card-title">Gratis tenues</h4>
             <ul class="list-unstyled">
@@ -138,7 +138,7 @@ ref: homepage
       </div>
       <div class="col-12 col-sm-6 col-md-3 mb-4">
         <div class="card card-concept text-center">
-          <div class="card-image"> <img class="card-img-top" src="{{site.baseurl}}/img/concept2.png" alt="Card image cap"> </div>
+          <div class="card-image"> <img class="card-img-top img-fluid" src="{{site.baseurl}}/img/concept2.png" alt="Card image cap"> </div>
           <div class="card-body">
             <h4 class="card-title">Gratis webshop</h4>
             <ul class="list-unstyled">
@@ -151,12 +151,12 @@ ref: homepage
       </div>
       <div class="col-12 col-sm-6 col-md-3 mb-4">
         <div class="card card-concept text-center">
-          <div class="card-image"> <img class="card-img-top" src="{{site.baseurl}}/img/concept3.png" alt="Card image cap"> </div>
+          <div class="card-image"> <img class="card-img-top img-fluid" src="{{site.baseurl}}/img/concept3.png" alt="Card image cap"> </div>
           <div class="card-body">
             <h4 class="card-title">Printing</h4>
             <ul class="list-unstyled">
-              <li>Interessante sponsoroplossingen</li>
-              <li>Groot bereik</li>
+              <li>Kwalitatieve bedrukkingn</li>
+              <li>Scherpe prijs</li>
               <li>100% controle</li>
             </ul>
           </div>
@@ -164,7 +164,7 @@ ref: homepage
       </div>
       <div class="col-12 col-sm-6 col-md-3 mb-4">
         <div class="card card-concept text-center">
-          <div class="card-image"> <img class="card-img-top" src="{{site.baseurl}}/img/concept4.png" alt="Card image cap"> </div>
+          <div class="card-image"> <img class="card-img-top img-fluid" src="{{site.baseurl}}/img/concept4.png" alt="Card image cap"> </div>
           <div class="card-body">
             <h4 class="card-title">1 platform</h4>
             <ul class="list-unstyled">
@@ -272,12 +272,12 @@ ref: homepage
     </div>
     <div class="row">
       <div class="col-lg-8 ml-auto mr-auto">
-        <div class="card-columns reviews">
-          {% for item in site.data.reviews %}
+        <div class="reviews">
+          {% for item in site.data.reviews-nl %}
           <div class="card card-review mb-5">
             <div class="row">
-              <div class="col-4"> <img class="img-fluid" src="{{site.baseurl}}/img/review.png"> </div>
-              <div class="col-8">
+              <div class="col-4 col-md-2"> <img class="img-fluid" src="{{site.baseurl}}/img/{{item.img}}"> </div>
+              <div class="col-8 col-md-10">
                 <div class="card-body">
                   <p class="card-text">“{{item.text}}”</p> <small>{{item.name}}, {{item.club}}</small> </div>
               </div>

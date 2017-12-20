@@ -1,5 +1,6 @@
 # SITE SETTINGS
 # global meta settings
+languages: [nl, fr]
 title:
   nl: Brandsfit
   fr: Brandsfit
@@ -36,6 +37,7 @@ t:
     call: <u>Bel ons</u> voor een afspraak of meer informatie
     appointment: <u><strong>Maak een afspraak</strong></u> met mij en scoor je gratis tenues
     karel_brandsfit: Karel van Brandsfit
+    email: Email ons
   fr:
     helpdesk: FR Bel onze helpdesk
     netherlands: Les Pays-Bas
@@ -46,6 +48,7 @@ t:
     call: <u>Appelez-nous</u> pour un rendez-vous ou plus d'informations
     appointment: <u><strong>Prenez un rendez-vous</strong></u> avec moi et marquez vos kits gratuits
     karel_brandsfit: Karel de Brandsfit
+    email: Nous envoyer un courriel
 
 # NAVIGATION
 # main top navigation

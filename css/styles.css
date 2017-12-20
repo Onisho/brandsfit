@@ -76,7 +76,7 @@ hr {color:#E6E6E6;}
 
 /* FOOTER */
 .footer {background-color:#0fb89a;color:#FFF;}
-.footer h2 {font-size: 1.4rem;font-weight:300;padding-top:10px;margin-bottom:22px;}
+.footer h2 {font-size: 1.4rem;font-weight:300;padding-top:10px;margin-bottom:3px;}
 .footer p {margin-bottom:5px;}
 .footer a {color:#FFFFFF;}
 .footer .nav-item {font-size:.7rem;padding:2px 0 ;}
@@ -84,7 +84,7 @@ hr {color:#E6E6E6;}
 .footer .flag {display:inline-block;width:20px;height:15px;vertical-align:baseline;}
 .footer .flag-netherlands {background:url('../img/flag-netherlands.png') no-repeat;background-size:contain;}
 .footer .flag-belgium {background:url('../img/flag-belgium.png') no-repeat;background-size:contain;}
-
+.footer .social {font-size:2rem;}
 
 /* COPYRIGHT */
 .copyright {background-color:#4b4b4b;color:#FFFFFF;font-weight:300;font-size:.75rem;padding:7px 0;}
@@ -99,7 +99,7 @@ hr {color:#E6E6E6;}
 @media only screen and (max-width : 768px) { #visuals .blocks .block {display:inline-block;width:50%;margin-bottom: -5px;}}
 
 /* CAPTION */
-.caption {color:white;padding-top:15%;width:100%;}
+.caption {color:white;padding-top:15px;width:100%;}
 .caption h1 {font-size:4rem;font-style:italic;font-family: Aleo,Georgia,Serif;text-shadow:1px 1px 1px #000;}
 .caption h4 {font-size:2.4rem;font-weight:300;font-style:normal;color:#fff;}
 @media (max-width: 767px) {
@@ -210,6 +210,7 @@ section.top {padding:0;}
   section.padding-5 {padding:1rem 0;}
   h1, .h1 {font-size:3rem;}
   h2, .h2 {font-size:2.4rem;}
+  .caption {padding-top:15%;}
 }
 @media screen and (min-width: 768px){ 
   section.padding-10 {padding:10rem 0;}
