@@ -39,14 +39,14 @@ t:
     karel_brandsfit: Karel van Brandsfit
     email: Email ons
   fr:
-    helpdesk: FR Bel onze helpdesk
+    helpdesk: Contactez notre service client
     netherlands: Les Pays-Bas
     belgium: Belgique
-    club_webshop: FR Club Webshop
+    club_webshop: Boutique en ligne
     register_club: Registrez votre club
     register_club_url: registrez-club
     call: <u>Appelez-nous</u> pour un rendez-vous ou plus d'informations
-    appointment: <u><strong>Prenez un rendez-vous</strong></u> avec moi et marquez vos kits gratuits
+    appointment: <u><strong>Prenez rendez-vous</strong></u> avec moi et recevez des tenues gratuites !
     karel_brandsfit: Karel de Brandsfit
     email: Nous envoyer un courriel
 
@@ -69,7 +69,7 @@ navi:
       url: /visibiliteit
   fr:
     clubs:
-      name: Choissir pour Brandsfit
+      name: Choisir pour Brandsfit
       url: /
     about:
       name: Au sujet de brandsfit
