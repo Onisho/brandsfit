@@ -5,7 +5,7 @@ $dblogin 	    = 'brandsfit';
 $dbpassword 	= 'eiiK45!0';
 $dbtable        = 'club';
 
-
+$lang = $_POST['lang'];
 $interesse = $_POST['interesse'];
 $club = $_POST['club'];
 $regio = $_POST['regio'];
@@ -14,21 +14,6 @@ $naam = $_POST['naam'];
 $email = $_POST['email'];
 $telefoon = $_POST['telefoon'];
 $functie = $_POST['functie'];
-
-
-//echo "interesse: ".$interesse."<br />";
-//echo "club: ".$club."<br />";
-//echo "regio: ".$regio."<br />";
-//echo "jeugdleden: ".$jeugdleden."<br />";
-//echo "sponsors: <br />";
-//foreach($_POST['sponsors'] as $sponsor){
-//    echo $sponsor . '<br />';
-//}
-//echo "<br />";
-//echo "naam: ".$naam."<br />";
-//echo "email: ".$email."<br />";
-//echo "telefoon: ".$telefoon."<br />";
-
 
 $db = mysql_connect($dbhost, $dblogin, $dbpassword);
 
@@ -42,14 +27,25 @@ $sql = "INSERT INTO $dbtable (date, interesse, club, regio, jeugdleden, naam, em
 $result = mysql_query($sql) or die('Could not execute query.');
 ?>
 
-<html class="no-js" lang="">
+<html class="no-js" lang="<?php echo $lang; ?>">
 <!--<![endif]-->
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Brandsfit - Brands.Set.Match.</title>
-  <meta http-equiv="refresh" content="0;url=nl" />
+  
+  <?php
+  switch($lang) {
+  case fr:
+  echo "<meta http-equiv='refresh' content='1;url=http://www.brandsfit.com/fr/merci'>";
+  break;
+  case nl:
+  echo "<meta http-equiv='refresh' content='1;url=http://www.brandsfit.com/nl/bedankt'>";
+  break;
+  }
+  ?>
+  
 </head>
 
 <body></body>
