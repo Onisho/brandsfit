@@ -27,7 +27,7 @@ $sql = "INSERT INTO $dbtable (date, interesse, club, regio, jeugdleden, naam, em
 $result = mysql_query($sql) or die('Could not execute query.');
 ?>
 
-<html class="no-js" lang="<?php echo $lang; ?>">
+<html class="no-js" lang="<?php echo $functie; ?>">
 <!--<![endif]-->
 
 <head>
@@ -38,10 +38,10 @@ $result = mysql_query($sql) or die('Could not execute query.');
   <?php
   switch($lang) {
   case fr:
-  echo "<meta http-equiv='refresh' content='1;url=http://www.brandsfit.com/fr/merci'>";
+  echo "<meta http-equiv='refresh' content='0;url=http://www.brandsfit.com/fr/merci'>";
   break;
   case nl:
-  echo "<meta http-equiv='refresh' content='1;url=http://www.brandsfit.com/nl/bedankt'>";
+  echo "<meta http-equiv='refresh' content='0;url=http://www.brandsfit.com/nl/bedankt'>";
   break;
   }
   ?>
