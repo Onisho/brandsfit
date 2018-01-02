@@ -10,7 +10,7 @@ description:
 keywords:
   nl: clubbudget
   fr: budget de club
-baseurl: /brandsfit
+baseurl: 
 exclude: ['README.md']
 
 # COLLECTIONS
